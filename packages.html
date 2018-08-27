@@ -1,0 +1,101 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us">
+<head>
+	<title>List of Linux Packages</title>
+	<link rel="stylesheet" href="css/jq.css" type="text/css" media="print, projection, screen" />
+	<link rel="stylesheet" href="themes/blue/style.css" type="text/css" media="print, projection, screen" />
+	<script type="text/javascript" src="jquery-latest.js"></script>
+	<script type="text/javascript" src="jquery.tablesorter.js"></script>
+	<script type="text/javascript">
+	$(function() {		
+		$("#package-table").tablesorter({sortList:[[2,1],[1,0]], widgets: ['zebra']});
+	});	
+	</script>
+</head>
+<body>
+<div id="main">
+	<a name="Linux Packages"></a>
+	<h1>Linux Packages</h1>
+
+	<table id="package-table" class="tablesorter" border="0" cellpadding="0" cellspacing="1">
+		<thead>
+			<tr>
+				<th>Name</th>
+				<th>Package Name</th>
+				<th>Priority</th>
+				<th>Notes</th>
+				<th>Link to More Info</th>
+
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>doxygen</td>
+				<td>doxygen</td>
+				<td>required</td>
+				<td>for code documentation</td>
+				<td></td>
+
+			</tr>
+			<tr>
+				<td>git</td>
+				<td>git</td>
+				<td>required</td>
+				<td>version control system</td>
+				<td></td>
+
+			</tr>
+			<tr>
+				<td>ctags</td>
+				<td>ctags</td>
+				<td>recommended</td>
+				<td>allows you to jump to function and variable definitions while coding</td>
+				<td></td>
+
+			</tr>
+			<tr>
+				<td>terminal multiplexer</td>
+				<td>tmux</td>
+				<td>recommended</td>
+				<td>have multiple shells in one terminal window</td>
+				<td></td>
+
+			</tr>
+			<tr>
+				<td>vi improved</td>
+				<td>vim</td>
+				<td>recommended</td>
+				<td>popular text editor with good plugins</td>
+				<td></td>
+
+			</tr>
+			<tr>
+				<td>steam locomotive</td>
+				<td>sl</td>
+				<td>optional</td>
+				<td>cures your bad habits and is fun</td>
+				<td></td>
+
+			</tr>
+			<tr>
+				<td>z shell</td>
+				<td>zsh</td>
+				<td>optional</td>
+				<td>alternative to bash with plugins</td>
+				<td></td>
+
+			</tr>
+			<tr>
+				<td>cmake</td>
+				<td>cmake</td>
+				<td>required</td>
+				<td>build system tools</td>
+				<td></td>
+
+			</tr>
+		</tbody>
+	</table>
+</body>
+</html>
+
