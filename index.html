@@ -3,53 +3,71 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us">
 <head>
 	<title>List of Linux Packages</title>
-	<link rel="stylesheet" href="css/jq.css" type="text/css" media="print, projection, screen" />
-	<link rel="stylesheet" href="themes/blue/style.css" type="text/css" media="print, projection, screen" />
-	<script type="text/javascript" src="jquery-latest.js"></script>
-	<script type="text/javascript" src="jquery.tablesorter.js"></script>
+	<link rel="stylesheet" href="resources/css/index.css" type="text/css" media="print, projection, screen" />
+	<link rel="stylesheet" href="resources/css/blue-theme/style.css" type="text/css" media="print, projection, screen" />
+	<script type="text/javascript" src="resources/jquery/jquery-latest.js"></script>
+	<script type="text/javascript" src="resources/jquery/jquery.tablesorter.js"></script>
 	<script type="text/javascript">
 	$(function() {		
 		$("#package-table").tablesorter({sortList:[[2,1],[1,0]], widgets: ['zebra']});
 	});	
 	</script>
+    <script type="text/javascript" src="resources/js/index.js"></script>
+    <script type="text/javascript">
+        jQuery('#package-table input[type=checkbox]').live('change', function() {
+            var id_name = jQuery(this).attr('id');
+            if (!jQuery(this).is(':checked')) { //switched to not
+                updateinstallstring(id_name, "remove");
+            } else {
+                updateinstallstring(id_name, "add");
+            }
+        });
+    </script>
 </head>
 <body>
 <div id="main">
-	<a name="Linux Packages"></a>
+	<a name="Debian/Ubuntu Linux Package Installer"></a>
 	<h1>Linux Packages</h1>
-
+    
+    <h2>Install command: 
+        <input 
+            id="i1" class="installscript" type="text" value="" name=""
+        />
+        <button
+            id="b1" class="copytoclip" type="text" onclick="copy()">Copy to clipboard
+        </button>
+    </h2>
+    <p id="t1" value="sudo apt-get install"></p>
 	<table id="package-table" class="tablesorter" border="0" cellpadding="0" cellspacing="1">
 		<thead>
 			<tr>
-				
 				<th></th>
 				<th>Name</th>
 				<th>Package Name</th>
 				<th>Priority</th>
 				<th>Notes</th>
 				<th>Link to More Info</th>
-
 			</tr>
 		</thead>
 		<tbody>
-			<tr>
-				<td><input type="checkbox" name="doxygen" /></td>
+			<tr> 
+				<td><input id="doxygen" class="package" type="checkbox"/></td>
 				<td>doxygen</td>
 				<td>doxygen</td>
 				<td>required</td>
 				<td>for code documentation</td>
 				<td></td>
-
 			</tr>
 			<tr>
+				<td><input id="git" class="package" type="checkbox"/></td>
 				<td>git</td>
 				<td>git</td>
 				<td>required</td>
 				<td>version control system</td>
 				<td></td>
-
 			</tr>
 			<tr>
+				<td><input id="ctags" class="package" type="checkbox"/></td>
 				<td>ctags</td>
 				<td>ctags</td>
 				<td>recommended</td>
@@ -58,6 +76,7 @@
 
 			</tr>
 			<tr>
+				<td><input id="tmux" class="package" type="checkbox"/></td>
 				<td>terminal multiplexer</td>
 				<td>tmux</td>
 				<td>recommended</td>
@@ -66,6 +85,7 @@
 
 			</tr>
 			<tr>
+				<td><input id="vim" class="package" type="checkbox"/></td>
 				<td>vi improved</td>
 				<td>vim</td>
 				<td>recommended</td>
@@ -74,6 +94,7 @@
 
 			</tr>
 			<tr>
+				<td><input id="sl" class="package" type="checkbox"/></td>
 				<td>steam locomotive</td>
 				<td>sl</td>
 				<td>optional</td>
@@ -82,6 +103,7 @@
 
 			</tr>
 			<tr>
+				<td><input id="zsh" class="package" type="checkbox"/></td>
 				<td>z shell</td>
 				<td>zsh</td>
 				<td>optional</td>
@@ -90,6 +112,7 @@
 
 			</tr>
 			<tr>
+				<td><input id="cmake" class="package" type="checkbox"/></td>
 				<td>cmake</td>
 				<td>cmake</td>
 				<td>required</td>
