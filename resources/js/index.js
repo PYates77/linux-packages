@@ -27,12 +27,14 @@ function updateinstallstring(current, option) {
         temp += " " + current;
         console.log("add: " + current);
         console.log("t1 value: " + temp);
+        document.getElementById("t1").value = temp;
         document.getElementById("i1").value = temp;
     }
     else if(option === "remove") {
         temp = temp.replace(" " + current, "");
         console.log("remove: " + current);
         console.log("t1 value: " + temp);
+        document.getElementById("t1").value = temp;
         document.getElementById("i1").value = temp;
     }
     else {
