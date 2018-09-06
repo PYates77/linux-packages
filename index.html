@@ -28,7 +28,6 @@
 <div id="main">
 	<a name="Debian/Ubuntu Linux Package Installer"></a>
 	<h1>Linux Packages</h1>
-    
     <h2>Install command: 
         <input 
             id="i1" class="installscript" type="text" value="" name=""
@@ -60,7 +59,7 @@
 			</tr>
 			<tr>
 				<td><input id="git" class="package" type="checkbox"/></td>
-				<td>git</td>
+				<td><a href="https://guides.github.com/introduction/git-handbook/">git</a></td>
 				<td>git</td>
 				<td>required</td>
 				<td>version control system</td>
@@ -82,7 +81,6 @@
 				<td>recommended</td>
 				<td>have multiple shells in one terminal window</td>
 				<td></td>
-
 			</tr>
 			<tr>
 				<td><input id="vim" class="package" type="checkbox"/></td>
@@ -91,7 +89,6 @@
 				<td>recommended</td>
 				<td>popular text editor with good plugins</td>
 				<td></td>
-
 			</tr>
 			<tr>
 				<td><input id="sl" class="package" type="checkbox"/></td>
@@ -100,7 +97,6 @@
 				<td>optional</td>
 				<td>cures your bad habits and is fun</td>
 				<td></td>
-
 			</tr>
 			<tr>
 				<td><input id="zsh" class="package" type="checkbox"/></td>
@@ -109,7 +105,6 @@
 				<td>optional</td>
 				<td>alternative to bash with plugins</td>
 				<td></td>
-
 			</tr>
 			<tr>
 				<td><input id="cmake" class="package" type="checkbox"/></td>
@@ -118,8 +113,47 @@
 				<td>required</td>
 				<td>build system tools</td>
 				<td></td>
-
 			</tr>
+			<tr>
+				<td><input id="openssh-server" class="package" type="checkbox"/></td>
+				<td>openssh server</td>
+				<td>openssh-server</td>
+				<td>required</td>
+				<td>allow computer to act as server</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td><input id="openssh-client" class="package" type="checkbox"/></td>
+				<td>openssh client</td>
+				<td>openssh-client</td>
+				<td>required</td>
+				<td>allow computer to act as client</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td><input id="xclip" class="package" type="checkbox"/></td>
+				<td>xclip</td>
+				<td>xclip</td>
+				<td>optional</td>
+				<td>copy output of terminal directly into clipboard or file</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td><input id="repo" class="package" type="checkbox"/></td>
+				<td>repo</td>
+				<td>repo</td>
+				<td>required</td>
+				<td>used to manage and install several repos at the same time</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td><input id="tree" class="package" type="checkbox"/></td>
+				<td><a href="https://linux.die.net/man/1/tree">tree</a></td>
+				<td>tree</td>
+				<td>optional</td>
+				<td>recursive directory listing command to display tree-like listing</td>
+				<td></td>
+			</tr>			
 		</tbody>
 	</table>
 </body>
