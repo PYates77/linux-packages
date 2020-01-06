@@ -9,7 +9,7 @@
 	<script type="text/javascript" src="resources/jquery/jquery.tablesorter.js"></script>
 	<script type="text/javascript">
 	$(function() {		
-		$("#package-table").tablesorter({sortList:[[2,1],[1,0]], widgets: ['zebra']});
+		$("#package-table").tablesorter({sortList:[[3,0],[2,0]], widgets: ['zebra']});
 	});	
 	</script>
     <script type="text/javascript" src="resources/js/index.js"></script>
@@ -50,20 +50,28 @@
 		</thead>
 		<tbody>
 			<tr> 
+				<td><input id="build-essential" class="package" type="checkbox"/></td>
+				<td>Ubuntu essential build tools</td>
+				<td>build-essential</td>
+				<td>required</td>
+				<td>contains dpkg-dev, g++, gcc, libc6-dev, and make</td>
+                <td><a href=https://packages.ubuntu.com/xenial/build-essential>https://packages.ubuntu.com/xenial/build-essential</a></td>
+			</tr>
+			<tr> 
 				<td><input id="doxygen" class="package" type="checkbox"/></td>
 				<td>doxygen</td>
 				<td>doxygen</td>
 				<td>required</td>
 				<td>for code documentation</td>
-				<td></td>
+                <td><a href="http://doxygen.nl/">Doxygen</a></td>
 			</tr>
 			<tr>
 				<td><input id="git" class="package" type="checkbox"/></td>
-				<td><a href="https://guides.github.com/introduction/git-handbook/">git</a></td>
+				<td>git</td>
 				<td>git</td>
 				<td>required</td>
 				<td>version control system</td>
-				<td></td>
+				<td><a href="https://guides.github.com/introduction/git-handbook/">git-handbook</a></td>
 			</tr>
 			<tr>
 				<td><input id="ctags" class="package" type="checkbox"/></td>
@@ -71,7 +79,7 @@
 				<td>ctags</td>
 				<td>recommended</td>
 				<td>allows you to jump to function and variable definitions while coding</td>
-				<td></td>
+                <td><a href="http://ctags.sourceforge.net/">CTags Sourceforge</a></td>
 
 			</tr>
 			<tr>
@@ -80,7 +88,7 @@
 				<td>tmux</td>
 				<td>recommended</td>
 				<td>have multiple shells in one terminal window</td>
-				<td></td>
+                <td><a href="https://github.com/tmux/tmux/wiki">tmux wiki</a></td>
 			</tr>
 			<tr>
 				<td><input id="vim" class="package" type="checkbox"/></td>
@@ -88,14 +96,14 @@
 				<td>vim</td>
 				<td>recommended</td>
 				<td>popular text editor with good plugins</td>
-				<td></td>
+                <td><a href="https://github.com/vim/vim">Vim Github</a></td>
 			</tr>
 			<tr>
 				<td><input id="sl" class="package" type="checkbox"/></td>
 				<td>steam locomotive</td>
 				<td>sl</td>
 				<td>optional</td>
-				<td>cures your bad habits and is fun</td>
+				<td></td>
 				<td></td>
 			</tr>
 			<tr>
@@ -104,15 +112,18 @@
 				<td>zsh</td>
 				<td>optional</td>
 				<td>alternative to bash with plugins</td>
-				<td></td>
+                <td>
+                    <a href="http://zsh.sourceforge.net/">zsh sourceforge</a>
+                    <a href="https://github.com/ohmyzsh/ohmyzsh">oh my zsh</a>
+                </td>
 			</tr>
 			<tr>
 				<td><input id="cmake" class="package" type="checkbox"/></td>
 				<td>cmake</td>
 				<td>cmake</td>
 				<td>required</td>
-				<td>build system tools</td>
-				<td></td>
+				<td>makefile generator</td>
+                <td><a href="https://cmake.org/">CMake</a></td>
 			</tr>
 			<tr>
 				<td><input id="openssh-server" class="package" type="checkbox"/></td>
@@ -120,7 +131,7 @@
 				<td>openssh-server</td>
 				<td>required</td>
 				<td>allow computer to act as server</td>
-				<td></td>
+                <td><a href="https://www.openssh.com/">OpenSSH</a></td>
 			</tr>
 			<tr>
 				<td><input id="openssh-client" class="package" type="checkbox"/></td>
@@ -128,7 +139,7 @@
 				<td>openssh-client</td>
 				<td>required</td>
 				<td>allow computer to act as client</td>
-				<td></td>
+                <td><a href="https://www.openssh.com/">OpenSSH</a></td>
 			</tr>
 			<tr>
 				<td><input id="xclip" class="package" type="checkbox"/></td>
@@ -136,7 +147,7 @@
 				<td>xclip</td>
 				<td>optional</td>
 				<td>copy output of terminal directly into clipboard or file</td>
-				<td></td>
+                <td><a href="https://linux.die.net/man/1/xclip">man xclip</a></td>
 			</tr>
 			<tr>
 				<td><input id="repo" class="package" type="checkbox"/></td>
@@ -144,15 +155,23 @@
 				<td>repo</td>
 				<td>required</td>
 				<td>used to manage and install several repos at the same time</td>
-				<td></td>
+                <td><a href="https://gerrit.googlesource.com/git-repo">https://gerrit.googlesource.com/git-repo</a></td>
 			</tr>
 			<tr>
 				<td><input id="tree" class="package" type="checkbox"/></td>
-				<td><a href="https://linux.die.net/man/1/tree">tree</a></td>
+				<td>tree</td>
 				<td>tree</td>
 				<td>optional</td>
 				<td>recursive directory listing command to display tree-like listing</td>
-				<td></td>
+				<td><a href="https://linux.die.net/man/1/tree">man tree</a></td>
+			</tr>			
+			<tr>
+				<td><input id="minicom" class="package" type="checkbox"/></td>
+				<td>minicom</td>
+				<td>minicom</td>
+				<td>optional</td>
+				<td>serial terminal</td>
+				<td><a href="https://linux.die.net/man/1/minicom">man minicom</a></td>
 			</tr>			
 		</tbody>
 	</table>
